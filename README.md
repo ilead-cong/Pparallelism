@@ -37,8 +37,8 @@ def Multi_process(function, params_list, n_threads):
     pool = Pool(n_threads)
     for param in params_list:
         pool.apply_async(func=function, args=param)
-        pool.close()
-        pool.join()
+    pool.close()
+    pool.join()
 
     return
 
